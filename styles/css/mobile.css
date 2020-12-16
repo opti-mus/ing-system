@@ -125,10 +125,10 @@
     display: none;
   }
   .nav-slider__prev {
-    top: 400px;
+    top: 330px;
   }
   .nav-slider__next {
-    top: 400px;
+    top: 330px;
   }
   .header__container {
     display: none;
@@ -168,7 +168,7 @@
     display: none;
   }
   .why {
-    padding-bottom: 50px;
+    height: 420px;
   }
   .my-slider__item {
     margin-top: 0;
@@ -185,7 +185,7 @@
     width: 100%;
   }
   .my-slider__info {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
   }
   .price__container {
@@ -303,6 +303,9 @@
   .team-marvel__subtitle {
     font-size: 12px;
   }
+  .price__item::before {
+    left: -28px;
+  }
   .works__container {
     padding: 30px 0;
   }
@@ -315,6 +318,10 @@
   }
   .footer__container {
     font-size: 9px;
+  }
+  .works-slider {
+    width: 70%;
+    margin: 0 auto;
   }
   .works-slider__img {
     width: 100px;
