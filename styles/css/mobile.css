@@ -130,6 +130,9 @@
   .container {
     width: 95%;
   }
+  .btn__caption {
+    display: none;
+  }
   .nav-slider__prev {
     top: 400px;
   }
