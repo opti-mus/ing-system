@@ -1,4 +1,20 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Noah Grotesque';
+  src: local("Noah Grotesque Medium"), local("Noah Grotesque Medium");
+  src: url("../fonts/Noah Grotesque Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noah Grotesque Bold';
+  src: local("Noah Grotesque Heavy"), local("Noah Grotesque Heavy");
+  src: url("../fonts/Noah Grotesque Heavy.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
 * {
   outline: none;
 }
@@ -58,7 +74,7 @@ input,
 textarea,
 div,
 a {
-  font-family: "Avenir Next Cyr", sans-serif;
+  font-family: "Noah Grotesque", sans-serif;
   margin: 0;
 }
 
@@ -145,7 +161,7 @@ li {
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
-  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-family: "Noah Grotesque Bold", sans-serif;
   white-space: wrap;
 }
 
@@ -265,7 +281,7 @@ li {
   text-transform: none;
   color: #909090;
   font-weight: 300;
-  font-family: "Avenir Next Cyr", sans-serif;
+  font-family: "Noah Grotesque", sans-serif;
 }
 
 .header__download-icon {
@@ -638,7 +654,7 @@ li {
   font-size: 0.4em;
   text-transform: lowercase;
   color: #909090;
-  font-family: "Avenir Next Cyr", sans-serif;
+  font-family: "Noah Grotesque", sans-serif;
   font-weight: 400;
 }
 
@@ -974,7 +990,7 @@ li {
   text-align: center;
   border-radius: 50px;
   text-transform: uppercase;
-  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-family: "Noah Grotesque Bold", sans-serif;
   font-weight: 900;
   color: #434A54;
   -webkit-transition: .3s;
@@ -1245,6 +1261,13 @@ li {
 .target__right {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .target__btn {
@@ -1350,7 +1373,7 @@ li {
 .works__toggle {
   margin: 0 20px;
   color: #303337;
-  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-family: "Noah Grotesque Bold", sans-serif;
   -webkit-transition: color .3s;
   transition: color .3s;
 }
