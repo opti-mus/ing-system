@@ -146,7 +146,7 @@ li {
   text-transform: uppercase;
   position: relative;
   font-family: "Avenir Next Cyr Medium", sans-serif;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .btn:hover .btn__caption {
