@@ -17,23 +17,24 @@ body
 
 h1,
 h2,
-h3,
-h4,
 h5,
 h6,
 strong
     font-family: $titleFont
     margin: 0
 h1
-    font-size: 45px
+    font-size: 43px
 h2
-    font-size: 40px
+    font-size: 38px
+    font-family: $titleFont
 h3
     font-size: 24px
     font-weight: 500
+    font-family: $subtitleFont
 h4
     font-size: 20px
     font-weight: 500
+    font-family: $subtitleFont
 p,
 li,
 span,
@@ -926,7 +927,7 @@ li
         overflow: hidden
         border-bottom: 1px solid
         padding: 37px 0
-        max-height: 30px
+        max-height: 20px
         position: relative
         transition: max-height .8s ease
         transform: translate(0)
@@ -936,9 +937,6 @@ li
                 border: none
             & .faq__down-icon
                 transform: rotate(180deg)
-
-    &__desc
-
     &__wrap
         padding-right: 10%
         position: relative
@@ -962,7 +960,7 @@ li
         transition: transform .8s
     &__link
         font-family: $titleFont
-        font-size: 1.4em
+        font-size: 1.3em
         border-bottom: 1px dotted
         transition: .3s
         position: relative

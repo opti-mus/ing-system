@@ -20,7 +20,7 @@
     font-size: 9px;
   }
   h2 {
-    font-size: 4.75vw !important;
+    font-size: 4.35vw !important;
   }
   h3 {
     font-size: 25px;
@@ -114,9 +114,6 @@
   }
   .faq__accordion {
     font-size: 12px;
-  }
-  .faq__item {
-    max-height: 25px;
   }
 }
 
@@ -213,7 +210,7 @@
     width: 100%;
   }
   .why__title {
-    font-size: 6.4vw;
+    font-size: 5.6vw;
   }
   .services__ctrl {
     margin-top: 40px;
@@ -230,7 +227,7 @@
             align-items: center;
   }
   .team-marvel__counter {
-    font-size: 20px;
+    font-size: 15px;
   }
   .team-marvel__counter li {
     margin: 0 20px;
@@ -266,6 +263,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  .my-slider__title {
+    font-size: 4.9vw;
   }
   .services-list__item {
     width: 50%;
@@ -319,5 +319,13 @@
   .works-slider__img {
     width: 100px;
     height: 100px;
+  }
+  .works-slider__nav .nav-slider__prev {
+    top: 50%;
+    left: 0;
+  }
+  .works-slider__nav .nav-slider__next {
+    top: 50%;
+    right: 0;
   }
 }
