@@ -78,12 +78,15 @@ li
 
     &-form
         background-color: $whiteColor
-        // padding: 30px
         display: flex
         box-shadow: 0 10px 25px rgba(0,0,0,.5)
         position: relative
+        overflow-y: auto
+        max-height: 90vh
         &__title
             margin-bottom: 30px
+        &__img
+            height: 507px
         &__desc
             display: flex
             flex-direction: column
@@ -129,7 +132,51 @@ li
                 height: 25px
                 background-color: $dark
                 transform: rotate(90deg)
+    &-info
+        background-color: $whiteColor
+        box-shadow: 0 10px 25px rgba(0,0,0,.5)
+        position: relative
+        max-width: 640px
+        overflow-y: scroll
+        max-height: 80vh
+        text-align: center
+        &__title
+            margin-bottom: 30px
+            margin-top: 50px
+        &__img
+            width: 80%
+        &__desc
+            margin-top: 40px
+            padding: 0 60px
+            text-align: left
+            padding-bottom: 40px
+        &__item
+            list-style: disc
+            font-size: 16px
+        &__faq
+            background-color: $blueColor
+            padding: 30px 60px 60px 60px
+            color: $whiteColor
+        &__data
+            display: flex
+            flex-wrap: wrap
+        &__inp
+            &.input-des
+                border-color: $whiteColor
+                width: 100%
+                &::placeholder
+                    color: inherit
+        &__btn
+            &.main-btn
+                border: none
+                width: 100%
 
+.link
+    border-bottom: 1px dotted
+    margin: 0 4px 3px
+    &:hover
+        background-color: $yellowColor
+        color: $dark
 .btn-anim
     &:hover
         background-color: $hoverBtnYellow

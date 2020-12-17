@@ -25,7 +25,7 @@
   h3 {
     font-size: 25px;
   }
-  img {
+  img::not(.modal-form__img) {
     width: 100%;
   }
   .stock__title {
@@ -133,6 +133,9 @@
   .modal-form__desc {
     width: 100%;
     margin-left: 0;
+  }
+  .modal-info {
+    width: 90%;
   }
   .nav-slider__prev {
     top: 330px;
@@ -344,5 +347,20 @@
   .works-slider__nav .nav-slider__next {
     top: 50%;
     right: 0;
+  }
+  .modal-form, .modal-info {
+    width: 95%;
+  }
+  .modal-form__title, .modal-info__title {
+    font-size: 18px;
+  }
+  .modal-form__inp, .modal-info__inp {
+    padding: 20px 10px;
+  }
+  .modal-info__desc {
+    padding: 10px 30px;
+  }
+  .modal-info__faq {
+    padding: 20px 30px;
   }
 }

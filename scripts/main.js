@@ -13,7 +13,13 @@ document.addEventListener('DOMContentLoaded',()=>{
             },
             unbuild: {
                 title: 'Демонтаж',
-                desc: 'unbuild info',
+                desc: 
+                [
+                    'Демонтаж конструкций осуществляется согласно действующим нормам с соблюдением правил техники безопасности',
+                    'При проведении таких работ важно максимально сохранить целостность имущества клиента. Поэтому обязательной упаковке подлежат датчики пожарной сигнализации, окна, радиаторы, двери и т.п',
+                    'Производить демонтаж систем отопления, канализации, водопроводных труб и стяжек разрешено после отключения отопления и водоснабжения. При этом следует убедиться, что запорная арматура в данном помещении исправна.',
+                    'Разборка несущих конструкций или установка в них проемов возможна при наличии разрешительных документов и утвержденного проекта. Мероприятия согласовываются с руководителем работ.'
+                ],
                 imgURL: '/img/demontazh.jpg'
             }
         },
@@ -246,15 +252,32 @@ document.addEventListener('DOMContentLoaded',()=>{
     accardion()
     function drawModal(type,data,infoData){
         let modal = '';
-
+        let list = '';
+        
         if(type == 'info') {
             body.style.overflow = 'hidden';
+            data[type][infoData].desc.forEach(el=>{
+                list+=`<li class='modal-info__item'>${el}</li>`
+            })
             modal = `
             <div class="modal-wrapper open">
-                <div class="modal-window modal-window_info ">
-                    <h2 class="modal-window__title">${data[type][infoData].title}</h2>
-                    <img src="${data[type][infoData].imgURL}" />
-                    <p>${data[type][infoData].desc}</p>  
+                <div class="modal-info">
+                    <h2 class="modal-info__title">${data[type][infoData].title}</h2>
+                    <img src="${data[type][infoData].imgURL}" class='modal-info__img'/>
+                    <ul class='modal-info__desc'>${list}</ul>  
+                    <div class='modal-info__faq'>
+                        <h3 class='modal-info__subtitle'>
+                            Остались вопросы? <br>
+                            Оставьте номер и мы перезвоним
+                        </h3>
+                        <form class='modal-info__data'>
+                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class='input-des modal-info__inp' placeholder='Введите телефон'> 
+                            <input type="submit" value='Жду звонка' class='main-btn modal-info__btn'/>
+                        </form>
+                    </div>
+                    <div class='modal-form__close' >
+                        <span class='modal-form__hamburber' ></span>
+                    </div>
                 </div>
             </div>        
         `
@@ -265,8 +288,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                 <div class="modal-form ">
                     <img src='img/modal-1.jpg' class='modal-form__img' />
                     <form class='modal-form__desc'>
-                        <h3>${data.form.title}</h3>
-                        <input type="tel" class='input-des modal-form__inp' placeholder='Введите телефон'> 
+                        <h3 class='modal-form__title'>${data.form.title}</h3>
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class='input-des modal-form__inp' placeholder='Введите телефон'> 
                         <input type="email" class='input-des modal-form__inp' placeholder='Введите e-mail'/>
                         <input type="submit" value='Получить' class='main-btn modal-form__btn'/>
                         <span class='modal-form__comment'>Прайс будет отправлен на вашу почту</span>    

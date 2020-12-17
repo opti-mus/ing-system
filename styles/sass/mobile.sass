@@ -22,7 +22,7 @@
     h3
         font-size: 25px
 
-    img
+    img::not(.modal-form__img)
         width: 100%
     .stock
         &__title
@@ -97,6 +97,8 @@
         &__desc
             width: 100%
             margin-left: 0
+    .modal-info
+        width: 90%
     .nav-slider
         &__prev
             top: 330px
@@ -272,3 +274,15 @@
             & .nav-slider__next
                 top: 50%
                 right: 0
+    .modal-form,.modal-info
+        width: 95%
+        &__title
+            font-size: 18px
+        &__inp
+            padding: 20px 10px;
+    .modal-info
+        &__desc
+            padding: 10px 30px
+        &__faq
+            padding: 20px 30px
+    
