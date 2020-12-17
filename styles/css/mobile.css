@@ -117,6 +117,27 @@
   }
 }
 
+@media screen and (max-width: 820px) {
+  .my-slider__item {
+    margin-top: 0;
+  }
+  .my-slider__img {
+    display: none;
+  }
+  .my-slider__desc {
+    margin-left: 0;
+    margin-top: 40px;
+    border-left: none;
+    text-align: center;
+    padding-left: 0;
+    width: 100%;
+  }
+  .my-slider__info {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     width: 95%;
@@ -183,24 +204,6 @@
   .why {
     height: 420px;
   }
-  .my-slider__item {
-    margin-top: 0;
-  }
-  .my-slider__img {
-    display: none;
-  }
-  .my-slider__desc {
-    margin-left: 0;
-    margin-top: 40px;
-    border-left: none;
-    text-align: center;
-    padding-left: 0;
-    width: 100%;
-  }
-  .my-slider__info {
-    width: 70%;
-    margin: 0 auto;
-  }
   .price__container {
     padding-bottom: 50px;
     padding-top: 30px;
@@ -238,6 +241,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .services-list__item a figure:hover .services-list__anim {
+    -webkit-transition: none;
+    transition: none;
+    visibility: hidden;
+    opacity: 0;
   }
   .team-marvel__counter {
     font-size: 15px;
@@ -362,5 +371,8 @@
   }
   .modal-info__faq {
     padding: 20px 30px;
+  }
+  .modal-info__subtitle {
+    font-size: 20px;
   }
 }
