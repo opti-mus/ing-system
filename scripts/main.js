@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             design: {
                 title: 'Дизайн интерьера',
                 desc: 'design info',
-                imgURL: '/img/dizajn-intere`era.jpg'
+                imgURL: 'img/dizajn-intere`era.jpg'
             },
             unbuild: {
                 title: 'Демонтаж',
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                     'Производить демонтаж систем отопления, канализации, водопроводных труб и стяжек разрешено после отключения отопления и водоснабжения. При этом следует убедиться, что запорная арматура в данном помещении исправна.',
                     'Разборка несущих конструкций или установка в них проемов возможна при наличии разрешительных документов и утвержденного проекта. Мероприятия согласовываются с руководителем работ.'
                 ],
-                imgURL: '/img/demontazh.jpg'
+                imgURL: 'img/demontazh.jpg'
             }
         },
         form: {
