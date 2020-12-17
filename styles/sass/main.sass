@@ -76,11 +76,59 @@ li
             opacity: 1
             visibility: visible
 
-    &-window
+    &-form
         background-color: $whiteColor
-        padding: 60px
+        // padding: 30px
+        display: flex
+        box-shadow: 0 10px 25px rgba(0,0,0,.5)
+        position: relative
         &__title
             margin-bottom: 30px
+        &__desc
+            display: flex
+            flex-direction: column
+            width: 44%
+            margin-left: 31px
+            padding: 24px
+        &__inp
+            width: auto !important
+            color: $dark !important
+            border: 3px solid $dark !important
+            &:focus
+                border: 3px solid $dark !important
+        &__btn
+            border: none
+            width: 100%
+        &__comment
+            align-self: center
+            margin-top: 20px
+        &__close
+            position: absolute
+            right: 10px
+            top: 10px
+            width: 25px
+            height: 25px
+            cursor: pointer
+        &__hamburber
+            display: block
+            position: absolute
+            top: 0
+            right: 11px
+            width: 2px
+            height: 25px
+            background-color: $dark
+            transform: rotate(45deg)
+            // cursor: pointer
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                right: 0
+                top: 0
+                width: 2px
+                height: 25px
+                background-color: $dark
+                transform: rotate(90deg)
 
 .btn-anim
     &:hover

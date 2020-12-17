@@ -124,6 +124,16 @@
   .btn__caption {
     display: none;
   }
+  .modal-form {
+    width: 80%;
+  }
+  .modal-form__img {
+    display: none;
+  }
+  .modal-form__desc {
+    width: 100%;
+    margin-left: 0;
+  }
   .nav-slider__prev {
     top: 330px;
   }

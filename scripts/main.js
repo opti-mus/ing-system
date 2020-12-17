@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
         },
         form: {
-            title: 'title form',
+            title: 'Получите актуальный прайс',
             desc: 'desc form'
         }
     }
@@ -187,10 +187,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         let servicesList = document.querySelectorAll('.services-list__item');
 
         servicesList.forEach(el=>{
-            el.addEventListener('click',()=>{
+            el.addEventListener('click',(e)=>{
                 let type = el.dataset.modal;
                 let infoType = el.dataset.info;
-                
+
+                e.preventDefault()
                 showModal(drawModal(type,data,infoType))
                 
             })
@@ -212,13 +213,16 @@ document.addEventListener('DOMContentLoaded',()=>{
         let timer;
     
         document.addEventListener('click',(e)=>{
-            if(e.target.classList.contains('modal-wrapper')){
-                flag = true;
-                e.target.classList.remove('open');
+            if(e.target.classList.contains('modal-wrapper') ||
+            e.target.classList.contains('modal-form__close') ||
+            e.target.classList.contains('modal-form__hamburber') ){
+                const wrapper = document.querySelector('.modal-wrapper');
+
+                wrapper.classList.remove('open');
                 body.style.overflow = 'visible';
                 
                 setTimeout(()=>{
-                    e.target.remove() 
+                    wrapper.remove() 
                     clearTimeout(timer)
                 },500)       
             }
@@ -247,7 +251,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             body.style.overflow = 'hidden';
             modal = `
             <div class="modal-wrapper open">
-                <div class="modal-window ">
+                <div class="modal-window modal-window_info ">
                     <h2 class="modal-window__title">${data[type][infoData].title}</h2>
                     <img src="${data[type][infoData].imgURL}" />
                     <p>${data[type][infoData].desc}</p>  
@@ -258,10 +262,19 @@ document.addEventListener('DOMContentLoaded',()=>{
             body.style.overflow = 'hidden';
             modal = `
             <div class="modal-wrapper open">
-                <div class="modal-window">
-                    <h2>${data.form.title}</h2>
-                    <p>${data.form.desc}</p> 
-                    <input type="text" /> 
+                <div class="modal-form ">
+                    <img src='img/modal-1.jpg' class='modal-form__img' />
+                    <form class='modal-form__desc'>
+                        <h3>${data.form.title}</h3>
+                        <input type="tel" class='input-des modal-form__inp' placeholder='Введите телефон'> 
+                        <input type="email" class='input-des modal-form__inp' placeholder='Введите e-mail'/>
+                        <input type="submit" value='Получить' class='main-btn modal-form__btn'/>
+                        <span class='modal-form__comment'>Прайс будет отправлен на вашу почту</span>    
+                    </form> 
+                    <div class='modal-form__close' >
+                        <span class='modal-form__hamburber' ></span>
+                    </div>
+                    
                 </div>
             </div>        
         `
