@@ -145,6 +145,9 @@
   .btn__caption {
     display: none;
   }
+  .humburger {
+    display: block;
+  }
   .modal-form {
     width: 80%;
   }
@@ -232,7 +235,7 @@
     margin-top: 40px;
   }
   .services-list__title {
-    font-size: 2.8vw;
+    font-size: 2.7vw;
   }
   .services-list__item a {
     width: 100%;
@@ -285,6 +288,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  .humburger__container {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   .my-slider__title {
     font-size: 4.9vw;

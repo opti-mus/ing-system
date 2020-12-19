@@ -13,17 +13,38 @@
     <title>Goverla</title>
 </head>
 <body>
+    <div class="hide-menu">
+        <div class="hide-menu__close">
+            <span class="hide-menu__hamburber"></span>
+        </div>
+        <ul class='hide-menu__nav'>
+            <li class='hide-menu__item'><a href="#header" class="hide-menu__link">Начало</a></li>
+            <li class='hide-menu__item'><a href="#services" class="hide-menu__link">Интерьер и ремонт</a></li>
+            <li class='hide-menu__item'><a href="#why" class="hide-menu__link">Почему мы?</a></li>
+            <li class='hide-menu__item'><a href="#works" class="hide-menu__link">фото работ</a></li>
+            <li class='hide-menu__item'><a href="#header" class="hide-menu__link">отзывы</a></li>
+            <li class='hide-menu__item'><a href="#faq" class="hide-menu__link">faq</a></li>
+            <li class='hide-menu__item'><a href="#contacts" class="hide-menu__link">контакты</a></li>
+        </ul>
+    </div>
+    <div class="humburger">
+        <div class="humburger__container">
+            <span class="humburger__item"></span>
+            <span class="humburger__item"></span>
+            <span class="humburger__item"></span>
+        </div>
+    </div>
+    </div>
     <header id="header" class="header">
-        
         <div class="header__container">
             <ul class="header__nav header-nav container">
-                <li class="header-nav__item"><a class="header-nav__link isActive" href="#">Начало</a></li>
+                <li class="header-nav__item"><a class="header-nav__link isActive" href="#header">Начало</a></li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#services">Интерьер и ремонт</a></li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#why">Почему мы?</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Фото работ</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Отзывы</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#">FAQ</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#works">Фото работ</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#header">Отзывы</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#faq">FAQ</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
             </ul>
         </div>
         <div class="header__main container">
@@ -40,11 +61,11 @@
                     
                 </h1>
                 <div class="header__buttons">
-                    <a href="#" class="header__download btn btn-anim" data-modal='form'>
+                    <a href="#" class="header__download btn btn-anim" data-modal='form' data-info="price">
                         скачать свежий прайс
                         <span class="header__download-icon"></span>
                     </a>
-                    <a href="#" class="header__calculate btn btn-anim" data-modal='form'>
+                    <a href="#" class="header__calculate btn btn-anim" data-modal='form' data-info="repairs">
                         рассчитать смету
                         <span class="header__calculate-icon"></span>
                         <div class="btn__caption">Наличие сметы не обязывает делать заказ. Вы вправе запросить сметы у разных компаний, чтобы сравнить цены и подход к работе</div>
@@ -191,7 +212,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item"data-modal='info' data-info='unbuild'>
+                <li class="services-list__item" data-modal='info' data-info='unbuild'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -205,7 +226,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item"  data-modal='info' data-info='otdelka'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -219,7 +240,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='electro'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -233,7 +254,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='doors'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -248,7 +269,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='window'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -263,7 +284,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='paint'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -278,7 +299,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='blocks'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -293,7 +314,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='plumbing'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -308,7 +329,7 @@
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='air'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -317,13 +338,13 @@
                             </picture>
                             <img class="services-list__anim" src="img/img-services-10-gif.gif" alt="">
                             <figcaption class="services-list__title">
-                                <i class="services-list__border">Сантехнические</i>
-                                <i class="services-list__border">работы</i>
+                                <i class="services-list__border">Кондиционирование</i>
+                                
                             </figcaption>
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='camera'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -332,13 +353,13 @@
                             </picture>
                             <img class="services-list__anim" src="img/img-services-11-gif.gif" alt="">
                             <figcaption class="services-list__title">
-                                <i class="services-list__border">Сантехнические</i>
-                                <i class="services-list__border">работы</i>
+                                <i class="services-list__border">Слаботочные</i>
+                                <i class="services-list__border">системы</i>
                             </figcaption>
                         </figure>
                     </a>
                 </li>
-                <li class="services-list__item">
+                <li class="services-list__item" data-modal='info' data-info='trash'>
                     <a href="#">
                         <figure>
                             <picture>
@@ -347,15 +368,15 @@
                             </picture>
                             <img class="services-list__anim" src="img/img-services-12-gif.gif" alt="">
                             <figcaption class="services-list__title">
-                                <i class="services-list__border">Сантехнические</i>
-                                <i class="services-list__border">работы</i>
+                                <i class="services-list__border">Уборка и вывоз</i>
+                                <i class="services-list__border">мусора</i>
                             </figcaption>
                         </figure>
                     </a>
                 </li>
             </ul>
             <div class="services__ctrl">
-                <a href='' class="services__btn main-btn btn-anim" data-modal='form'>Заказать ремонт под ключ</a>
+                <a href='' class="services__btn main-btn btn-anim" data-modal='form' data-info='key'>Заказать ремонт под ключ</a>
                 <p class="services__recall">Перезвоним в течении двух часов</p>
             </div>
             
@@ -533,7 +554,7 @@
                     <li class="price__item">Наличие сметы не обязывает клиента делать заказ. Вы вправе запросить сметы в других фирмах, чтобы сравнить цены.</li>
                     <li class="price__item">Стоимость ремонтных работ не меняется до их окончания. О том, почему могут иметь место изменения в цене —<a href="" class="link"> читайте здесь</a> </li>
                     <li class="price__item">
-                        <a href="" class="price__btn main-btn btn-anim" data-modal='form'>Получить смету</a>
+                        <a href="" class="price__btn main-btn btn-anim" data-modal='form' data-info='repairs'>Получить смету</a>
                         <p>
                             или 
                             <a href="" class="link">отправьте</a>
@@ -548,7 +569,7 @@
             </div>
         </div>
     </section>
-    <section class="works">
+    <section class="works" id='works'>
         <div class="works__container container">
             <h2 class="works__title">Фото работ</h2>
             <div class="works__switch">
@@ -713,7 +734,7 @@
             </ul>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id='contacts'>
         <div class="contacts__container container">
             <h3 class="contacts__title">Остались вопросы? Звоните или пишите прямо сейчас.</h3>
             <h1 class="contacts__call">

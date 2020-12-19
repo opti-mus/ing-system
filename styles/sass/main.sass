@@ -10,6 +10,7 @@ body
     padding: 0
     color: $dark
     cursor: default
+    -webkit-tap-highlight-color: transparent
 
 ::selection
     color: $whiteColor
@@ -57,6 +58,82 @@ li
     list-style: none
     margin: 0
     padding: 0
+.humburger
+    display: none
+    &__container
+        position: fixed
+        top: 20px
+        right: 15px
+        width: 40px
+        height: 40px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        padding: 7px
+        z-index: 100
+        background-color: hsla(0,0%,96%,.341176)
+        cursor: pointer
+        
+    &__item
+        width: 35px
+        height: 3px
+        background-color: rgba($dark ,.7 )
+        display: block
+        &:nth-child(2)
+            width: 70%
+
+.hide-menu
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 100%
+    background-color: #2D2D4F
+    z-index: 100000
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    transition: .3s
+    overflow: hidden
+    &.open
+        bottom: 0
+    &__nav
+    &__item
+        text-transform: uppercase
+        color: #fff
+        margin-bottom: 10px
+    &__link
+        font-size: 25px
+    &__close
+        position: absolute
+        right: 7px
+        top: 13px
+        width: 25px
+        height: 25px
+        cursor: pointer
+        margin: 7px 13px 0 auto
+        font-family: $mainFontBold
+    &__hamburber
+        display: block
+        position: absolute
+        top: 0
+        right: 11px
+        width: 2px
+        height: 25px
+        background-color: $yellowColor
+        transform: rotate(45deg)
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            right: 0
+            top: 0
+            width: 2px
+            height: 25px
+            background-color: $yellowColor
+            transform: rotate(90deg)
 
 .modal
     &-wrapper
@@ -85,14 +162,17 @@ li
         position: relative
         overflow-y: auto
         max-height: 90vh
+        max-width: 750px
         &__title
             margin-bottom: 30px
+            font-size: 22px
         &__img
             height: 507px
+            width: 245px
         &__desc
             display: flex
             flex-direction: column
-            width: 44%
+            width: 100%
             margin-left: 31px
             padding: 24px
         &__inp
@@ -108,12 +188,13 @@ li
             align-self: center
             margin-top: 20px
         &__close
-            position: absolute
-            right: 10px
-            top: 10px
+            position: sticky
+            right: 7px
+            top: 13px
             width: 25px
             height: 25px
             cursor: pointer
+            margin: 7px 13px 0 auto
         &__hamburber
             display: block
             position: absolute
@@ -144,7 +225,7 @@ li
         text-align: center
         &__title
             margin-bottom: 30px
-            margin-top: 50px
+            margin-top: 20px
         &__img
             width: 80%
         &__desc
@@ -697,6 +778,7 @@ li
         font-size: 19px
         text-transform: none
         transition: background-color .3s
+        text-align: left
 
 .main-btn
     background-color: $yellowColor
