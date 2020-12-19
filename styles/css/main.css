@@ -204,7 +204,7 @@ li {
   right: 11px;
   width: 2px;
   height: 25px;
-  background-color: #f6b632;
+  background-color: #2E6BFF;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -217,7 +217,7 @@ li {
   top: 0;
   width: 2px;
   height: 25px;
-  background-color: #f6b632;
+  background-color: #2E6BFF;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -424,12 +424,12 @@ li {
 }
 
 .link:hover {
-  background-color: #f6b632;
+  background-color: #2E6BFF;
   color: #303337;
 }
 
 .btn-anim:hover {
-  background-color: #ffd98b;
+  background-color: #2EA9FF;
 }
 
 .btn-anim:active {
@@ -567,7 +567,7 @@ li {
 }
 
 .header__download {
-  background-color: #f6b632;
+  background-color: #2E6BFF;
   color: #434A54;
   -webkit-transition: background-color, .3s;
   transition: background-color, .3s;
@@ -660,7 +660,7 @@ li {
 }
 
 .header-nav__link:hover {
-  color: #f6b632;
+  color: #2E6BFF;
 }
 
 .header-nav__link:after {
@@ -671,7 +671,7 @@ li {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #f6b632;
+  background: #2E6BFF;
   -webkit-transition: .25s;
   transition: .25s;
 }
@@ -779,7 +779,7 @@ li {
 }
 
 .nav-btn {
-  background-color: #f6b632;
+  background-color: #2E6BFF;
   border-radius: 50%;
   width: 38px;
   height: 38px;
@@ -967,7 +967,7 @@ li {
 }
 
 .stock__label:nth-child(4) {
-  color: #f6b632;
+  color: #2E6BFF;
 }
 
 .stock__label:nth-child(4)::after {
@@ -1249,7 +1249,7 @@ li {
 
 .services-list__item figure:hover .services-list__border {
   color: #303337;
-  background-color: #f6b632;
+  background-color: #2E6BFF;
 }
 
 .services-list__item figure:hover .services-list__anim {
@@ -1287,7 +1287,7 @@ li {
 }
 
 .main-btn {
-  background-color: #f6b632;
+  background-color: #2E6BFF;
   text-align: center;
   border-radius: 50px;
   text-transform: uppercase;
@@ -1363,7 +1363,7 @@ li {
 
 .team-marvel__counter li b {
   font-size: 1.8em;
-  color: #f6b632;
+  color: #2E6BFF;
 }
 
 .team-marvel-1, .team-marvel-2, .team-marvel-3, .team-marvel-4, .team-marvel-5, .team-marvel-6, .team-marvel-7, .team-marvel-8, .team-marvel-9 {
@@ -1629,7 +1629,7 @@ li {
 .price__item::before {
   content: '1';
   font-size: 2.5em;
-  color: #f6b632;
+  color: #2E6BFF;
   font-family: "Lubalin Regular", "Arial", sans-serif;
   font-weight: 600;
   position: absolute;
@@ -1680,8 +1680,8 @@ li {
 }
 
 .works__toggle.is-active {
-  border-bottom: 2px solid #f6b632;
-  color: #f6b632;
+  border-bottom: 2px solid #2E6BFF;
+  color: #2E6BFF;
   cursor: default;
 }
 
