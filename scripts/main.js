@@ -459,21 +459,39 @@ document.addEventListener('DOMContentLoaded',()=>{
         
     }
     function checkWindow(){
+        const nav = document.querySelectorAll('.header-nav .header-nav__item .header-nav__link');
         const faq = document.querySelector('#faq');
         const why = document.querySelector('#why')
-       
+        const header = document.querySelector('#header')
+        const works = document.querySelector('#works')
+        const services = document.querySelector('#services')
+        const contacts = document.querySelector('#contacts')
+        const price = document.querySelector('#price')
+
+        let arr = [faq,why,header,works,services,contacts,price];
+        
+
         document.addEventListener('scroll',(e)=>{
-            let myURL = e.target.URL;
-            let coords = pageYOffset
-            // console.log(coords);
-            // console.log(coords-faq.getBoundingClientRect().top );
-            // if((faq.getBoundingClientRect().top < 0)) {
-            //     if(faq.getBoundingClientRect().top +faq.getBoundingClientRect().height > 0)
-            //     console.log('ok');
-            // }
+            
+            arr.forEach(el=>{
+                console.log(why.getBoundingClientRect().top);
+               if((el.getBoundingClientRect().top <= 100)) {
+                if(el.getBoundingClientRect().top +el.getBoundingClientRect().height-50 > 0)
+                    nav.forEach(item=>{
+                        let link = item.href.substr(item.href.lastIndexOf('#')+1);
+                        
+                        item.classList.remove('isActive');
+                        if(link == el.id) {
+                            item.classList.add('isActive')
+                        }
+                    })
+                    
+                } 
+            })
         
         })
     }
+    
     sideMenu()
     checkWindow()
     changeSwitch()
