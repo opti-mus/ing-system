@@ -17,7 +17,6 @@
                             transition: none
                             visibility: hidden
                             opacity: 0
-        
 
 @media screen and ( max-width: 1024px )
     .container
@@ -118,7 +117,7 @@
             display: none
     .humburger
         display: block
-    .modal-form
+    .modal-form,.modal-message
         width: 80%
         &__img
             display: none
@@ -127,6 +126,15 @@
             margin-left: 0
     .modal-info
         width: 90%
+    .modal-message
+        &__wrapper
+            width: 100%
+            align-self: flex-start
+        &__desc
+            &.main-form
+                flex-direction: column
+                & .main-form__data
+                    margin: 0
     .nav-slider
         &__prev
             top: 330px
@@ -245,6 +253,8 @@
             font-size: 11px
         &__title
             width: auto
+
+    .main-form
         &__data
             width: 100%
             margin-right: 0

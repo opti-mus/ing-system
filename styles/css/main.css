@@ -252,14 +252,9 @@ li {
 }
 
 .modal-form {
-  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow-y: auto;
   max-height: 90vh;
   max-width: 750px;
 }
@@ -346,13 +341,7 @@ li {
 }
 
 .modal-info {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  position: relative;
   max-width: 640px;
-  overflow-y: scroll;
-  max-height: 80vh;
   text-align: center;
 }
 
@@ -416,6 +405,43 @@ li {
 .modal-info__btn.main-btn {
   border: none;
   width: 100%;
+}
+
+.modal-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-message__wrapper {
+  padding-left: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.modal-message__img {
+  height: 507px;
+  width: 245px;
+}
+
+.modal-message__desc.main-form .main-form__data {
+  margin-right: 20px;
+}
+
+.modal-message__desc.main-form .input-des {
+  width: auto;
+  border-color: #303337;
+  color: #303337;
+}
+
+.modal-form, .modal-info, .modal-message {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow-y: auto;
+  max-height: 80vh;
 }
 
 .link {
@@ -1875,7 +1901,7 @@ li {
   border-bottom: 1px dotted;
 }
 
-.contacts__form {
+.main-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1886,7 +1912,7 @@ li {
       flex-wrap: wrap;
 }
 
-.contacts__data {
+.main-form__data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1897,7 +1923,7 @@ li {
   margin-right: 100px;
 }
 
-.contacts__message {
+.main-form__message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1907,15 +1933,15 @@ li {
           flex-direction: column;
 }
 
-.contacts__submit {
-  border: none;
-}
-
-.contacts__area {
+.main-form__area {
   width: 250px;
   height: 120px;
   resize: none;
   overflow: hidden;
+}
+
+.main-form__submit {
+  border: none;
 }
 
 .footer {

@@ -156,11 +156,7 @@ li
             visibility: visible
 
     &-form
-        background-color: $whiteColor
         display: flex
-        box-shadow: 0 10px 25px rgba(0,0,0,.5)
-        position: relative
-        overflow-y: auto
         max-height: 90vh
         max-width: 750px
         &__title
@@ -216,12 +212,7 @@ li
                 background-color: $dark
                 transform: rotate(90deg)
     &-info
-        background-color: $whiteColor
-        box-shadow: 0 10px 25px rgba(0,0,0,.5)
-        position: relative
         max-width: 640px
-        overflow-y: scroll
-        max-height: 80vh
         text-align: center
         &__title
             margin-bottom: 30px
@@ -254,6 +245,29 @@ li
             &.main-btn
                 border: none
                 width: 100%
+    &-message
+        display: flex
+        &__wrapper
+            padding-left: 30px
+            align-self: center
+        &__img
+            height: 507px
+            width: 245px
+        &__desc
+            &.main-form
+                & .main-form__data
+                    margin-right: 20px
+                & .input-des
+                    width: auto
+                    border-color: $dark
+                    color: $dark
+
+.modal-form,.modal-info,.modal-message
+    background-color: $whiteColor
+    box-shadow: 0 10px 25px rgba(0,0,0,.5)
+    position: relative
+    overflow-y: auto
+    max-height: 80vh
 
 .link
     border-bottom: 1px dotted
@@ -1179,10 +1193,11 @@ li
         margin-bottom: 60px
         display: inline-block
         border-bottom: 1px dotted
-    &__form
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
+
+.main-form
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
     &__data
         display: flex
         flex-direction: column
@@ -1190,14 +1205,13 @@ li
     &__message
         display: flex
         flex-direction: column
-    &__submit
-        border: none
     &__area
         width: 250px
         height: 120px
         resize: none
         overflow: hidden
-
+    &__submit
+        border: none
 .footer
     background-color: $darkGray
     color: $whiteColor

@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     const stockAnimation = document.querySelector('.stock-animation');
     const stockTime = document.querySelector('.stock__time');
     const body = document.querySelector('body');
-    
     const data = {
         info : {
             design: {
@@ -173,47 +172,49 @@ document.addEventListener('DOMContentLoaded',()=>{
         },500);
     },14000);
 
-    tns({
-        container: '.my-slider',
-        mode: 'gallery',
-        items: 1,
-        slideBy: 'page',
-        autoplay: false,
-        nav: false,
-        touch: false,
-        controlsContainer: '.my-slider__nav',
-        animateIn: 'tns-fadeIn',
-        animateOut: 'tns-fadeOut',
-        speed: 1000,
-        swipeAngle: false
-    })
-    tns({
-        container: '.works-slider__build',
-        items: 1,
-        slideBy: 'page',
-        autoplay: false,
-        nav: false,
-        touch: false,
-        controls: true,
-        controlsContainer: '.works-slider__nav'
-        
-    })
-    tns({
-        container: '.works-slider__design',
-        items: 1,
-        slideBy: 'page',
-        autoplay: false,
-        nav: false,
-        touch: false,
-        controls: true,
-        controlsContainer: '.works-slider__nav'
-        
-    })
-    baguetteBox.run('.works-slider__item', {
-        animation: 'fadeIn',
-        noScrollbars: true
-    });
 
+    function sliderFnc() {
+        tns({
+            container: '.my-slider',
+            mode: 'gallery',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            nav: false,
+            touch: false,
+            controlsContainer: '.my-slider__nav',
+            animateIn: 'tns-fadeIn',
+            animateOut: 'tns-fadeOut',
+            speed: 1000,
+            swipeAngle: false
+        })
+        tns({
+            container: '.works-slider__build',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            nav: false,
+            touch: false,
+            controls: true,
+            controlsContainer: '.works-slider__nav'
+            
+        })
+        tns({
+            container: '.works-slider__design',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            nav: false,
+            touch: false,
+            controls: true,
+            controlsContainer: '.works-slider__nav'
+            
+        })
+        baguetteBox.run('.works-slider__item', {
+            animation: 'fadeIn',
+            noScrollbars: true
+        });
+    }
     function changeSwitch(){
         const workSwitch = document.querySelector('.works__switch');
         const slider = document.querySelectorAll('.works-slider [data-switch]');
@@ -317,7 +318,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             },1000)
         
     }
-    
     function checkType(){
         let servicesList = document.querySelectorAll('.services-list__item');
 
@@ -345,7 +345,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             
         })
     }
-    
     function showModal(modal) {
         let timer;
     
@@ -380,7 +379,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             })
         })
     }
-    accardion()
     function drawModal(type,data,infoData = 'price'){
         let modal = '';
         let list = '';
@@ -432,6 +430,31 @@ document.addEventListener('DOMContentLoaded',()=>{
                 </div>
             </div>        
         `
+        } else if(type == 'form-message') {
+            body.style.overflow = 'hidden';
+            modal = `
+            <div class="modal-wrapper open">
+                <div class="modal-message ">
+                    <img src='img/modal-1.jpg' class='modal-message__img' />
+                    <div class='modal-message__wrapper'>
+                        <h3 class="modal-form__title">Расскажите о своей задаче</h3>
+                        <form action="" class="modal-message__desc main-form">
+                            <div class="main-form__data">
+                                <input placeholder="Введите имя" type="text" class="input-des">
+                                <input placeholder="Введите e-mail" type="email" name="" id="" class="input-des">
+                            </div>
+                            <div class="main-form__message">
+                                <textarea placeholder="Введите сообщение" maxlength='200' cols="30" rows="10" class="input-des main-form__area"></textarea>
+                                <input type="submit" value="Жду звонка" class="main-form__submit main-btn btn-anim">
+                            </div>
+                        </form>
+                    </div>
+                    <div class='modal-form__close' >
+                            <span class='modal-form__hamburber' ></span>
+                    </div>
+                </div>
+            </div>        
+        `
         }
         
         return modal
@@ -474,7 +497,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.addEventListener('scroll',(e)=>{
             
             arr.forEach(el=>{
-                console.log(why.getBoundingClientRect().top);
                if((el.getBoundingClientRect().top <= 100)) {
                 if(el.getBoundingClientRect().top +el.getBoundingClientRect().height-50 > 0)
                     nav.forEach(item=>{
@@ -491,7 +513,9 @@ document.addEventListener('DOMContentLoaded',()=>{
         
         })
     }
-    
+
+    accardion()
+    sliderFnc()
     sideMenu()
     checkWindow()
     changeSwitch()

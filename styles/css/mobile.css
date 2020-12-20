@@ -160,18 +160,32 @@
   .humburger {
     display: block;
   }
-  .modal-form {
+  .modal-form, .modal-message {
     width: 80%;
   }
-  .modal-form__img {
+  .modal-form__img, .modal-message__img {
     display: none;
   }
-  .modal-form__desc {
+  .modal-form__desc, .modal-message__desc {
     width: 100%;
     margin-left: 0;
   }
   .modal-info {
     width: 90%;
+  }
+  .modal-message__wrapper {
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .modal-message__desc.main-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-message__desc.main-form .main-form__data {
+    margin: 0;
   }
   .nav-slider__prev {
     top: 330px;
@@ -317,11 +331,11 @@
   .contacts__title {
     width: auto;
   }
-  .contacts__data {
+  .main-form__data {
     width: 100%;
     margin-right: 0;
   }
-  .contacts__message {
+  .main-form__message {
     width: 100%;
   }
   .input-des {
