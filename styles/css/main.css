@@ -415,6 +415,7 @@ li {
 
 .modal-message__wrapper {
   padding-left: 30px;
+  padding-bottom: 30px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
