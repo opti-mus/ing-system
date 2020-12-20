@@ -390,13 +390,13 @@
     top: 50%;
     right: 0;
   }
-  .modal-form, .modal-info {
+  .modal-form, .modal-info, .modal-message {
     width: 95%;
   }
-  .modal-form__title, .modal-info__title {
+  .modal-form__title, .modal-info__title, .modal-message__title {
     font-size: 18px;
   }
-  .modal-form__inp, .modal-info__inp {
+  .modal-form__inp, .modal-info__inp, .modal-message__inp {
     padding: 20px 10px;
   }
   .modal-info__desc {
