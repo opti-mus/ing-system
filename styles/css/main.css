@@ -204,7 +204,7 @@ li {
   right: 11px;
   width: 2px;
   height: 25px;
-  background-color: #2E6BFF;
+  background-color: #f6b632;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -217,7 +217,7 @@ li {
   top: 0;
   width: 2px;
   height: 25px;
-  background-color: #2E6BFF;
+  background-color: #f6b632;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -379,7 +379,7 @@ li {
 }
 
 .modal-info__faq {
-  background-color: #37BC9B;
+  background-color: #2EB2FF;
   padding: 30px 60px 60px 60px;
   color: #ffffff;
 }
@@ -424,12 +424,12 @@ li {
 }
 
 .link:hover {
-  background-color: #2E6BFF;
+  background-color: #f6b632;
   color: #303337;
 }
 
 .btn-anim:hover {
-  background-color: #2EA9FF;
+  background-color: #ffd98b;
 }
 
 .btn-anim:active {
@@ -567,7 +567,7 @@ li {
 }
 
 .header__download {
-  background-color: #2E6BFF;
+  background-color: #f6b632;
   color: #434A54;
   -webkit-transition: background-color, .3s;
   transition: background-color, .3s;
@@ -660,7 +660,7 @@ li {
 }
 
 .header-nav__link:hover {
-  color: #2E6BFF;
+  color: #f6b632;
 }
 
 .header-nav__link:after {
@@ -671,7 +671,7 @@ li {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #2E6BFF;
+  background: #f6b632;
   -webkit-transition: .25s;
   transition: .25s;
 }
@@ -763,7 +763,7 @@ li {
 
 .why {
   position: relative;
-  background: #37BC9B;
+  background: #2EB2FF;
   padding-bottom: 220px;
 }
 
@@ -779,7 +779,7 @@ li {
 }
 
 .nav-btn {
-  background-color: #2E6BFF;
+  background-color: #f6b632;
   border-radius: 50%;
   width: 38px;
   height: 38px;
@@ -967,7 +967,7 @@ li {
 }
 
 .stock__label:nth-child(4) {
-  color: #2E6BFF;
+  color: #f6b632;
 }
 
 .stock__label:nth-child(4)::after {
@@ -1242,14 +1242,13 @@ li {
 }
 
 .services-list__item figure {
-  text-align: center;
   position: relative;
   cursor: pointer;
 }
 
 .services-list__item figure:hover .services-list__border {
   color: #303337;
-  background-color: #2E6BFF;
+  background-color: #f6b632;
 }
 
 .services-list__item figure:hover .services-list__anim {
@@ -1284,10 +1283,11 @@ li {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   text-align: left;
+  white-space: nowrap;
 }
 
 .main-btn {
-  background-color: #2E6BFF;
+  background-color: #f6b632;
   text-align: center;
   border-radius: 50px;
   text-transform: uppercase;
@@ -1363,7 +1363,7 @@ li {
 
 .team-marvel__counter li b {
   font-size: 1.8em;
-  color: #2E6BFF;
+  color: #f6b632;
 }
 
 .team-marvel-1, .team-marvel-2, .team-marvel-3, .team-marvel-4, .team-marvel-5, .team-marvel-6, .team-marvel-7, .team-marvel-8, .team-marvel-9 {
@@ -1578,7 +1578,7 @@ li {
 
 .price {
   text-align: center;
-  background-color: #37BC9B;
+  background-color: #2EB2FF;
   color: #ffffff;
 }
 
@@ -1629,7 +1629,7 @@ li {
 .price__item::before {
   content: '1';
   font-size: 2.5em;
-  color: #2E6BFF;
+  color: #f6b632;
   font-family: "Lubalin Regular", "Arial", sans-serif;
   font-weight: 600;
   position: absolute;
@@ -1680,8 +1680,8 @@ li {
 }
 
 .works__toggle.is-active {
-  border-bottom: 2px solid #2E6BFF;
-  color: #2E6BFF;
+  border-bottom: 2px solid #f6b632;
+  color: #f6b632;
   cursor: default;
 }
 
@@ -1725,7 +1725,7 @@ li {
 }
 
 .faq {
-  background-color: #37BC9B;
+  background-color: #2EB2FF;
   color: #ffffff;
   text-align: center;
 }
