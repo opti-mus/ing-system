@@ -130,6 +130,16 @@ const data = {
 
             ],
             imgURL: 'img/uborka-i-vy`voz-my`sora.jpg'
+        },
+        priceWork:{
+            title: 'Как формируется стоимость работ?',
+            desc:[
+                'После составления сметы нам позвонил заказчик и сказал, что другая фирма рассчитала цену, которая в 2 раза ниже предложенной нами. Оказалось, что эта компания сделала смету для услуги косметического ремонта. При ее анализе определили, что в ней не указан целый ряд важных работ. Подрядчик рассчитывал, что после начала проекта все новые работы клиент оплатит как дополнительные. Поэтому цена в смете будет постоянно повышаться.',
+                'Правильное и грамотное составление сметы с учетом пожеланий заказчика и всех технических моментов – гарантия того, что дополнительные расходы не превысят 7% общей стоимости ремонта.',
+                'На ряде работ можно сэкономить: так, при покраске стен стеклохолст заменяют бюджетным вариантом – флизелином без текстуры,  пропуская этап финишной шпатлевки. Однако на монтаже электропроводки и сантехнических работах экономить не рекомендуют: минимальный срок эксплуатации кабелей и труб, заложенных в стены и полы, должен составить 35 лет.',
+                'В нашей компании смету формирует технолог, компетентный в области отделки, мебели, установки систем кондиционирования, сантехники, электромонтажа и т.д. Таким образом мы оглашаем клиенту реальную стоимость услуг.'
+            ],
+            imgURL: 'img/uborka-i-vy`voz-my`sora.jpg'
         }
     },
     form: {
@@ -149,6 +159,10 @@ const data = {
             btnTitle: 'Жду звонка',
             comment: 'Мы перезвоним в течении двух часов'
         }
+    },
+    file: {
+        title: 'Давайте проверим смету на честность',
+        btnTitle: 'Отправить'
     }
 }
 
@@ -202,24 +216,30 @@ function checkType(){
         if(type) {
             e.preventDefault()
             showModal(drawModal(type,data,infoType));
-            Inputmask({
-                mask: '+38 (999) 999 99 99'
-            }).mask(document.querySelector('.inp-tel'));
+            if(type != 'form-message') {
+                Inputmask({
+                    mask: '+38 (999) 999 99 99'
+                }).mask(document.querySelector('.inp-tel'));
+            }
+            
         }
 
         
         
     })
 }
-function drawModal(type,data,infoData = 'price'){
+function drawModal(type,data,infoData){
     let modal = '';
     let list = '';
-    
+    let input = '';
     if(type == 'info') {
         body.style.overflow = 'hidden';
         data[type][infoData].desc.forEach(el=>{
             list+=`<li class='modal-info__item'>${el}</li>`
         })
+        if(infoData == 'priceWork') {
+            input = `<input type="text" class='input-des modal-info__inp' placeholder='Введите имя'/>`
+        }
         modal = `
         <div class="modal-wrapper open">
             <div class="modal-info">
@@ -235,8 +255,9 @@ function drawModal(type,data,infoData = 'price'){
                         Оставьте номер и мы перезвоним
                     </h3>
                     <form class='modal-info__data'>
+                        ${input}
                         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class='input-des modal-info__inp inp-tel' placeholder='Введите телефон'> 
-                        <input type="submit" value='Жду звонка' class='main-btn modal-info__btn'/>
+                        <input type="submit" value='Жду звонка' class='main-btn btn-anim modal-info__btn'/>
                     </form>
                 </div>
                 
@@ -254,7 +275,7 @@ function drawModal(type,data,infoData = 'price'){
                     <h3 class='modal-form__title'>${data[type][infoData].title}</h3>
                     <input type="tel" class='input-des modal-form__inp inp-tel' placeholder='Введите телефон'> 
                     <input type="email" class='input-des modal-form__inp' placeholder='Введите e-mail'/>
-                    <input type="submit" value='${data[type][infoData].btnTitle}' class='main-btn modal-form__btn'/>
+                    <input type="submit" value='${data[type][infoData].btnTitle}' class='main-btn btn-anim modal-form__btn'/>
                     <span class='modal-form__comment'>${data[type][infoData].comment}</span>    
                 </form> 
                 <div class='modal-form__close' >
@@ -289,6 +310,25 @@ function drawModal(type,data,infoData = 'price'){
         </div>        
     `
 
+    } else if(type=='file'){
+        body.style.overflow = 'hidden';
+        modal = `
+        <div class="modal-wrapper open">
+            <div class="modal-form ">
+                <img src='img/modal-1.jpg' class='modal-form__img' />
+                <form class='modal-form__desc'>
+                    <h3 class='modal-form__title'>${data[type].title}</h3>
+                    <input type="text" class='input-des modal-form__inp' placeholder='Введите имя'/>
+                    <input type="tel" class='input-des modal-form__inp inp-tel' placeholder='Введите телефон'> 
+                    <input type="file" class='input-des modal-form__inp' />
+                    <input type="submit" value='${data[type].btnTitle}' class='main-btn btn-anim modal-form__btn'/>
+                </form> 
+                <div class='modal-form__close' >
+                        <span class='modal-form__hamburber' ></span>
+                </div>
+            </div>
+        </div>        
+    `
     }
     
     return modal

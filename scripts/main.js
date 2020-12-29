@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     const body = document.querySelector('body');
     
 
+    
+    function headerAnimation(){
+
     animation.classList.add('animation');
     stockAnimation.classList.add('animated');
 
@@ -18,8 +21,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             animation.classList.add('animation');
         },500);
     },14000);
-
-
+    }
     function sliderFnc() {
         tns({
             container: '.my-slider',
@@ -165,8 +167,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             },1000)
         
     }
-    
-    
     function accardion(){
         const accardItem = document.querySelectorAll('.faq__accordion .faq__item');
         
@@ -176,8 +176,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 this.classList.toggle('is-active');
             })
         })
-    }
-    
+    }  
     function sideMenu(){
         const menu = document.querySelector('.hide-menu');
         const hambur = document.querySelector('.humburger__container');
@@ -232,7 +231,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         
         })
     }
-    
+    headerAnimation()
     accardion()
     sliderFnc()
     sideMenu()

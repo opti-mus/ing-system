@@ -288,6 +288,28 @@
   }
 }
 
+@media screen and (max-width: 675px) {
+  .works-slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .works-slider__img {
+    width: 212px;
+    height: 212px;
+  }
+}
+
+@media screen and (max-width: 561px) {
+  .works-slider__img {
+    width: 150px;
+    height: 150px;
+  }
+  .nav-btn {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
 @media screen and (max-width: 425px) {
   .header__logo {
     width: 100px;
@@ -340,10 +362,6 @@
   }
   .input-des {
     width: auto;
-  }
-  .nav-btn {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
   }
   .stock__container {
     padding-bottom: 60px;

@@ -212,7 +212,20 @@
     .target
         &__desc
             width: auto
-
+@media screen and ( max-width: 675px )
+    .works-slider
+        width: 80%
+        margin: 0 auto
+        &__img
+            width: 212px
+            height: 212px
+@media screen and ( max-width: 561px )
+    .works-slider
+        &__img
+            width: 150px
+            height: 150px
+    .nav-btn
+        transform: scale(0.7)
 @media screen and ( max-width: 425px )
     .header
         &__logo
@@ -262,8 +275,7 @@
             width: 100%
     .input-des
         width: auto
-    .nav-btn
-        transform: scale(0.7)
+
     .stock
         &__container
             padding-bottom: 60px
