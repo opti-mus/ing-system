@@ -1406,7 +1406,7 @@ li {
   content: "";
   display: block;
   position: absolute;
-  background: url(https://ck.net.ua/wp-content/themes/stroykompleks_v2/img/pages/sprite-team.png) 0 0 no-repeat;
+  background: url(../../img/sprite-team.png) 0 0 no-repeat;
   opacity: 0;
 }
 
